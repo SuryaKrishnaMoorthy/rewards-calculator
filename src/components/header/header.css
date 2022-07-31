@@ -1,0 +1,10 @@
+.header {
+  padding: 10px;
+  background-color: rgb(17, 15, 15);
+}
+
+.header h6 {
+  color: rgb(243, 237, 237);
+  font-size: 30px;
+  padding-left: 10%;
+}
