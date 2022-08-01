@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import "./header.css";
 
 function Header() {
-	return (
-		<div className="header">
-			<h6>Rewards Calculator</h6>
-		</div>
-	)
+  return (
+    <nav className="header">
+      <h6>Rewards Calculator</h6>
+    </nav>
+  );
 }
 
-export default Header
+export default Header;
