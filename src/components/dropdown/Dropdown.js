@@ -1,14 +1,20 @@
 import React from "react";
+import "./dropdown.css";
 
-function Dropdown({ options, onChange }) {
+function Dropdown({ options, handleDropdown, selected }) {
   return (
     <div>
-      <select value={options[0].customerName} onChange={onChange}>
-        {options.map(({ id, customerName }) => (
-          <option key={id} value={id}>
-            {customerName}
-          </option>
-        ))}
+      <select
+        value={selected}
+        onChange={(e) => handleDropdown(e)}
+      >
+        {options.map((option) => {
+          return (
+            <option key={option.id} value={option.id}>
+              {option.customerName}
+            </option>
+          );
+        })}
       </select>
     </div>
   );
