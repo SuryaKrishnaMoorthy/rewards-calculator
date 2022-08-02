@@ -7,14 +7,25 @@ export const monthIndex = {
 };
 
 export const getTableData = (transactions) => {
-    const rewards = calculateMonthlyRewards(transactions)
-    const rewardsArr =  Object.keys(rewards);
-    return Object.keys(monthIndex).reduce((acc, month, index) => {
-      acc[month] = rewards[rewardsArr[index]];
-      return acc
-    },{})
-}
+  const rewards = calculateMonthlyRewards(transactions);
+  /*
+    Modify the rewards object to get data in below format
+    {
+      january: 100,
+      february: 300,
+      march: 200
+    }
+    */
+  const rewardsArr = Object.keys(rewards);
+  return Object.keys(monthIndex).reduce((acc, month, index) => {
+    acc[month] = rewards[rewardsArr[index]];
+    return acc;
+  }, {});
+};
 
+/**
+  Calculate rewards for a customer for january, february, march
+ */
 export const calculateMonthlyRewards = (transactions) => {
   let rewards = {
     firstMonthRewards: 0,
@@ -42,6 +53,9 @@ export const calculateMonthlyRewards = (transactions) => {
   return monthlyRewards;
 };
 
+/**
+  calculate rewards for 1 transaction
+ */
 const rewardsForSingleTransaction = (amount) => {
   let points = 0,
     purchased = amount;
