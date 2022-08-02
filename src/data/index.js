@@ -84,8 +84,8 @@ export const DATA = [
     ],
   },
 	{
-    id: 1,
-    customerName: "Nick",
+    id: 3,
+    customerName: "Richard",
     transactions: [
       {
         date: "01-01-2022",
