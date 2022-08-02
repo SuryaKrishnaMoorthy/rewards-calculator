@@ -6,7 +6,7 @@ import { getTableData } from "../../utils";
 import "./home.css";
 
 function Home() {
-  const [selected, setSelected] = useState("1");
+  const [selected, setSelected] = useState(DATA[0].id);
   const [rewards, setRewards] = useState({});
 
   useEffect(() => {

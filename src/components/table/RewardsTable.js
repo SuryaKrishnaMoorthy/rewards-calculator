@@ -2,9 +2,10 @@ import React from "react";
 import "./rewardsTable.css";
 
 function RewardsTable({ rewards }) {
+  // Calculate total rewards for 3 months
   const total = Object.keys(rewards).reduce((acc, month) => {
     acc += rewards[month];
-		return acc;
+    return acc;
   }, 0);
 
   return (
