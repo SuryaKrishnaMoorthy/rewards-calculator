@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import "./rewardsTable.css";
 
 function RewardsTable({ rewards }) {
@@ -35,3 +37,11 @@ function RewardsTable({ rewards }) {
 }
 
 export default RewardsTable;
+
+RewardsTable.propTypes = {
+  rewards: PropTypes.shape({
+    january: PropTypes.number.isRequired,
+    february: PropTypes.number.isRequired,
+    march: PropTypes.number.isRequired,
+  })
+}

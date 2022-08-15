@@ -7,7 +7,7 @@ import "./home.css";
 
 function Home() {
   const [selected, setSelected] = useState(DATA[0].id);
-  const [rewards, setRewards] = useState({});
+  const [rewards, setRewards] = useState(null);
 
   useEffect(() => {
     const selectedCustomer = DATA.filter(
@@ -32,12 +32,13 @@ function Home() {
         />
       </section>
       <section>
-        <RewardsTable 
+       {rewards &&  <RewardsTable 
           rewards={rewards}
-        />
+        />}
       </section>
     </main>
   );
 }
 
 export default Home;
+
