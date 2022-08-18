@@ -9,6 +9,7 @@ tr,
 td {
   border: 1px solid rgb(140, 127, 127);
   border-collapse: collapse;
+  text-align: center;
 }
 
 th {
