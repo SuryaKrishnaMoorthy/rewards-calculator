@@ -17,4 +17,5 @@ each customer per month and total.
 
 - Fork and clone the repo.
 - Run `npm install` in the repo.
+- Run `npx json-server --watch database/db.json -p 3001`
 - Run `npm start` to start.
